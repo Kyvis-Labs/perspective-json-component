@@ -1,0 +1,29 @@
+{
+    "name": "@kyvislabs/jsonview-client",
+    "version": "1.0.0",
+    "description": "JsonView Perspective client component",
+    "main": "dist/index.js",
+    "license": "UNLICENSED",
+    "scripts": {
+        "build": "rimraf dist .awcache && webpack --mode development",
+        "clean": "rimraf dist .awcache"
+    },
+    "dependencies": {
+        "@inductiveautomation/perspective-client": "2.3.0",
+        "@microlink/react-json-view": "^1.23.0",
+        "react": "16.14.0",
+        "react-dom": "16.14.0"
+    },
+    "devDependencies": {
+        "@types/react": "16.8.8",
+        "@types/react-dom": "16.8.3",
+        "css-loader": "^2.1.1",
+        "rimraf": "^3.0.2",
+        "style-loader": "^3.3.1",
+        "ts-loader": "^9.2.9",
+        "typescript": "5.3.3",
+        "webpack": "5.72.0",
+        "webpack-cli": "4.9.2",
+        "@fiverr/afterbuild-webpack-plugin": "^1.0.0"
+    }
+}

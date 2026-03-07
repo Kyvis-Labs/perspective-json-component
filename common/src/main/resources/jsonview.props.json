@@ -1,0 +1,152 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "value": {
+            "type": "object",
+            "description": "The JSON object to display.",
+            "default": {}
+        },
+        "name": {
+            "type": "string",
+            "description": "The name of the root node.",
+            "default": "root"
+        },
+        "theme": {
+            "type": "string",
+            "enum": [
+                "apathy",
+                "apathy:inverted",
+                "ashes",
+                "ashes:inverted",
+                "bespin",
+                "bespin:inverted",
+                "brewer",
+                "brewer:inverted",
+                "bright",
+                "bright:inverted",
+                "chalk",
+                "chalk:inverted",
+                "codeschool",
+                "codeschool:inverted",
+                "colors",
+                "colors:inverted",
+                "eighties",
+                "eighties:inverted",
+                "embers",
+                "embers:inverted",
+                "flat",
+                "flat:inverted",
+                "google",
+                "google:inverted",
+                "grayscale",
+                "grayscale:inverted",
+                "greenscreen",
+                "greenscreen:inverted",
+                "harmonic",
+                "harmonic:inverted",
+                "hopscotch",
+                "hopscotch:inverted",
+                "isotope",
+                "isotope:inverted",
+                "marrakesh",
+                "marrakesh:inverted",
+                "mocha",
+                "mocha:inverted",
+                "monokai",
+                "monokai:inverted",
+                "ocean",
+                "ocean:inverted",
+                "paraiso",
+                "paraiso:inverted",
+                "pop",
+                "pop:inverted",
+                "railscasts",
+                "railscasts:inverted",
+                "rjv-default",
+                "shapeshifter",
+                "shapeshifter:inverted",
+                "solarized",
+                "solarized:inverted",
+                "summerfruit",
+                "summerfruit:inverted",
+                "threezerotwofour",
+                "threezerotwofour:inverted",
+                "tomorrow",
+                "tomorrow:inverted",
+                "tube",
+                "tube:inverted",
+                "twilight",
+                "twilight:inverted"
+            ],
+            "description": "The color theme for the JSON viewer.",
+            "default": "rjv-default"
+        },
+        "collapsed": {
+            "type": "boolean",
+            "description": "Whether all nodes should be collapsed by default.",
+            "default": false
+        },
+        "collapseDepth": {
+            "type": "integer",
+            "description": "Collapse nodes at a particular depth.",
+            "default": 99
+        },
+        "collapseStringsAfterLength": {
+            "type": "integer",
+            "description": "Collapse strings longer than this length.",
+            "default": 0
+        },
+        "groupArraysAfterLength": {
+            "type": "integer",
+            "description": "Group arrays with more elements than this threshold.",
+            "default": 100
+        },
+        "displayObjectSize": {
+            "type": "boolean",
+            "description": "Display the number of items in objects and arrays.",
+            "default": true
+        },
+        "displayDataTypes": {
+            "type": "boolean",
+            "description": "Display data type labels.",
+            "default": true
+        },
+        "enableClipboard": {
+            "type": "boolean",
+            "description": "Enable clipboard copy functionality.",
+            "default": true
+        },
+        "sortKeys": {
+            "type": "boolean",
+            "description": "Sort object keys alphabetically.",
+            "default": false
+        },
+        "indentWidth": {
+            "type": "integer",
+            "description": "The number of spaces for each indentation level.",
+            "default": 4
+        },
+        "iconStyle": {
+            "type": "string",
+            "enum": [
+                "circle",
+                "triangle",
+                "square"
+            ],
+            "description": "The style of expand/collapse icons.",
+            "default": "triangle"
+        },
+        "quotesOnKeys": {
+            "type": "boolean",
+            "description": "Display quotes around object keys.",
+            "default": true
+        },
+        "style": {
+            "$ref": "urn:ignition-schema:schemas/style-properties.schema.json",
+            "default": {
+                "classes": ""
+            }
+        }
+    }
+}

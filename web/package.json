@@ -1,0 +1,18 @@
+{
+    "name": "jsonview-web",
+    "version": "1.0.0",
+    "description": "JsonView Perspective component web resources",
+    "main": "dist/index.js",
+    "author": "Kyvis Labs",
+    "license": "MIT",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "build": "cd packages/client && rimraf dist .awcache && webpack --mode development"
+    },
+    "devDependencies": {
+        "lerna": "3.22.1"
+    }
+}

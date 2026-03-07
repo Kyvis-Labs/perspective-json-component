@@ -1,0 +1,12 @@
+build/
+.gradle/
+node_modules/
+dist/
+*.modl
+*.unsigned.modl
+web/packages/client/dist/
+web/packages/designer/dist/
+web/build/
+.idea/
+*.iml
+.claude
