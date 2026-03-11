@@ -26,9 +26,17 @@ export interface JsonViewProps {
     indentWidth: number;
     iconStyle: "circle" | "triangle" | "square";
     quotesOnKeys: boolean;
+    enableEdit: boolean;
+    enableAdd: boolean;
+    enableDelete: boolean;
 }
 
 export class JsonView extends Component<ComponentProps<JsonViewProps>, any> {
+    onUpdate = (data: any) => {
+        this.props.store.props.write("value", data.updated_src);
+        return true;
+    }
+
     render() {
         const { props, emit } = this.props;
 
@@ -50,6 +58,9 @@ export class JsonView extends Component<ComponentProps<JsonViewProps>, any> {
                     indentWidth={props.indentWidth || 4}
                     iconStyle={props.iconStyle || "triangle"}
                     quotesOnKeys={props.quotesOnKeys !== false}
+                    onEdit={props.enableEdit ? this.onUpdate : false}
+                    onAdd={props.enableAdd ? this.onUpdate : false}
+                    onDelete={props.enableDelete ? this.onUpdate : false}
                 />
             </div>
         );
@@ -87,7 +98,10 @@ export class JsonViewMeta implements ComponentMeta {
             sortKeys: tree.readBoolean("sortKeys", false),
             indentWidth: tree.readNumber("indentWidth", 4),
             iconStyle: tree.readString("iconStyle", "triangle") as "circle" | "triangle" | "square",
-            quotesOnKeys: tree.readBoolean("quotesOnKeys", true)
+            quotesOnKeys: tree.readBoolean("quotesOnKeys", true),
+            enableEdit: tree.readBoolean("enableEdit", false),
+            enableAdd: tree.readBoolean("enableAdd", false),
+            enableDelete: tree.readBoolean("enableDelete", false)
         };
     }
 }
