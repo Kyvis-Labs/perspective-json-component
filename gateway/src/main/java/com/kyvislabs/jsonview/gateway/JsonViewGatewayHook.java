@@ -64,4 +64,9 @@ public class JsonViewGatewayHook extends AbstractGatewayModuleHook {
     public boolean isFreeModule() {
         return true;
     }
+
+    @Override
+    public boolean isMakerEditionCompatible() {
+        return true;
+    }
 }

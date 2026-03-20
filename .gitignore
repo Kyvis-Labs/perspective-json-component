@@ -10,3 +10,4 @@ web/build/
 .idea/
 *.iml
 .claude
+plans/
