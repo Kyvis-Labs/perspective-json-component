@@ -3,8 +3,10 @@ plugins {
     id("io.ia.sdk.modl") version("0.3.0")
 }
 
+val buildTimestamp = java.time.LocalDateTime.now().format(java.time.format.DateTimeFormatter.ofPattern("yyyyMMddHH"))
+
 allprojects {
-    version = "1.0.0"
+    version = "8.3.4"
     group = "com.kyvislabs"
 }
 
@@ -12,9 +14,9 @@ ignitionModule {
     fileName.set("JsonViewComponent")
     name.set("JsonViewComponent")
     id.set("com.kyvislabs.jsonview")
-    moduleVersion.set("${project.version}")
+    moduleVersion.set("${project.version}.${buildTimestamp}")
     moduleDescription.set("A module that adds an interactive JSON viewer component to Perspective.")
-    requiredIgnitionVersion.set("8.3.0")
+    requiredIgnitionVersion.set("8.3.4")
     license.set("license.html")
 
     moduleDependencies.put("com.inductiveautomation.perspective", "DG")
